@@ -3,4 +3,4 @@
 endpoint="/api/data"
 | parse "response_time_ms=* " as response_time_ms
 | where response_time_ms > 3000
-| count by _timeslice
+| count as slow_calls
