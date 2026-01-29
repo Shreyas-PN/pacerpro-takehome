@@ -1,6 +1,5 @@
 # Sumo Logic Query to detect slow /api/data API responses (>3 seconds)
 
-endpoint="/api/data"
-| parse "response_time_ms=* " as response_time_ms
-| where response_time_ms > 3000
+_sourceCategory=* 
+| where _raw contains "/api/data"
 | count as slow_calls

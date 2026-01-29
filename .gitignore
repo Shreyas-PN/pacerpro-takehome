@@ -1,0 +1,16 @@
+# Terraform state files
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Terraform variables (secrets)
+*.tfvars
+*.tfvars.json
+
+# AWS credentials (just in case)
+.aws/
+.env
+
+# Lambda build artifacts (optional)
+lambda.zip
